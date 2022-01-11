@@ -30,3 +30,14 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 - logout
 - clear
 - exit
+
+
+<hr/>
+
+Command example
+```js
+// sudo
+    else if (CurrentCommand == 'sudo' || CurrentCommand == 'su' || CurrentCommand == 'sudo su') {
+      $("#Terminal").append('nice try<br/>');
+    }
+```
