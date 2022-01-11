@@ -16,6 +16,13 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 | cv  | open resume in new window  |
 | sites  | my sites/blogs  |
 
+
+### Game-like commands
+| command  | what it does |
+| ------------- | ------------- |
+| hacker  | generates a random hacker name  |
+
+
 ### Standard linux commands
 
 - echo
