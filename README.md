@@ -17,9 +17,10 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 | sites  | my sites/blogs  |
 
 
-### Game-like commands
+### Other commands
 | command  | what it does |
 | ------------- | ------------- |
+|  bitcoin  | display Bitcoin price in USD |
 | hacker  | generates a random hacker name  |
 | hack hack  | hacking nasa with html |
 
