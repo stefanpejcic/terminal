@@ -21,6 +21,7 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 | command  | what it does |
 | ------------- | ------------- |
 | hacker  | generates a random hacker name  |
+| hack hack  | hacking nasa with html |
 
 
 ### Standard linux commands
