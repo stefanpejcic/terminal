@@ -1,10 +1,10 @@
-# terminal-portfolio
+## terminal-portfolio
 
 Simple portfolio showcasting Linux terminal made in JS and CSS
 
 ![screenshot](https://raw.githubusercontent.com/stefanpejcic/terminal-portfolio/main/stefan%20portfolio.png)
 
-## Available commands
+### Available commands
 
 | command  | what it does |
 | ------------- | ------------- |
@@ -16,7 +16,7 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 | cv  | open resume in new window  |
 | sites  | my sites/blogs  |
 
-## Standard linux commands
+### Standard linux commands
 
 - echo
 - mkdir
@@ -34,10 +34,13 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 
 <hr/>
 
-Command example
+### Command example
 ```js
 // sudo
     else if (CurrentCommand == 'sudo' || CurrentCommand == 'su' || CurrentCommand == 'sudo su') {
       $("#Terminal").append('nice try<br/>');
     }
 ```
+### License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
