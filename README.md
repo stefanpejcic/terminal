@@ -15,6 +15,8 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 | resume  | link to download my resume  |
 | cv  | open resume in new window  |
 | sites  | my sites/blogs  |
+| pc | RSS feed of latest 10 posts from pcx3.com  |
+| wp  | RSS feed of latest 10 posts from wpxss.com  |
 
 
 ### Other commands
