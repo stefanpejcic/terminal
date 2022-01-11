@@ -4,6 +4,18 @@ Simple portfolio showcasting Linux terminal made in JS and CSS
 
 ![screenshot](https://raw.githubusercontent.com/stefanpejcic/terminal-portfolio/main/stefan%20portfolio.png)
 
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Title</b></td>
+    <td><b style="font-size:30px">Title 2</b></td>
+ </tr>
+ <tr>
+    <td>Lorem ipsum ...</td>
+    <td>Lorem ipsum ...</td>
+ </tr>
+</table>
+
+
 
 ## Available commands
 
