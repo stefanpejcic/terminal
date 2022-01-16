@@ -1,8 +1,3 @@
-  window.console = window.console || function(t) {};
-
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
 var nav = {
 	init: function() {
 		nav.menuBtn = document.getElementById("menu-btn");
@@ -41,29 +36,22 @@ var nav = {
 };
 document.addEventListener("DOMContentLoaded", nav.init);
 
-
-
-
-
 //Current line
 var CurrentId = undefined;
-var hostname = "stefanpejcic.com";
+var hostname = "pcx3.com";
 var username = 'guest';
 var folder = '~';
 
 //Print Greetings
-    $("#Terminal").append('👋 Hi, I’m Stefan Pejčić. I am a virtualization architect, medior system administrator, and  WordPress plugin developer.<br/><br/>'); 
-    $("#Terminal").append('In my 10+ years of working in IT I’ve concluded one thing: <b>technology is easy, it’s the people that are hard.</b> <br/><br/>');
-    $("#Terminal").append('Everybody takes IT folks for granted, only noticing them when something is not working. <br/> And when those situations happen, we either come up with a quick solution or use a strategy that worked in the past. <br/>PCx3.com is a blog that provides exactly that: How To&apos;s and hacks that worked for me, and hopefully they&apos;ll help other sysadmins as well.<br/><br/>');
-    $("#Terminal").append('The posts here become more and more sophisticated as my experience grows and I confront more challenging issues.<br/><br/>');
-    $("#Terminal").append('Thank you for stopping by.<br/><br/>');
-
-
+    $("#Terminal").append('<div id="welcome">👋 Hi, my name is Stefan Pejčić.</div> I&apos;m a virtualization architect, <a href="https://www.linkedin.com/in/stefan-pejcic/" target="_blank">medior system administrator</a>, and  <a href="https://profiles.wordpress.org/stefanpejcic/#content-plugins" target="_blank">WordPress plugin developer.</a><br/><br/>'); 
+    $("#Terminal").append('I tend to write very specific blog posts solving practical issues with the goal of saving the reader&apos;s time.<br/><br/>');
+    $("#Terminal").append('<div id="githubterm">This terminal is open sourced on github at <a href="https://github.com/stefanpejcic/terminal" target="_blank">stefanpejcic/terminal</a>. Feel free to submit pull requests when you find my typos. <br/><br/></div>');
+    $("#Terminal").append('Use the following commands to get to know me:<br/><br/>');
  
 //help commands
-      $("#Terminal").append('whoami &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information about myself<br/>');
-      $("#Terminal").append('social &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My social profiles<br/>');
-      $("#Terminal").append('resume &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Download my resume<br/>');
+      $("#Terminal").append('whoami &nbsp; - &nbsp; About myself<br/>');
+      $("#Terminal").append('social &nbsp; - &nbsp; My social profiles<br/>');
+      $("#Terminal").append('resume &nbsp; - &nbsp; Download my resume<br/><br/>');
  
 
 
@@ -173,7 +161,7 @@ function ExecuteLine(command) {
 	$("#Terminal").append('.gitignore<br/>');
 }
 
-//ll lsla
+//ll
     else if (CurrentCommand == 'll' || CurrentCommand == 'ls -la') {
 $("#Terminal").append('total 16<br/>');		
 $("#Terminal").append('dr-xr-x---.&nbsp;&nbsp; 9 root root&nbsp;&nbsp; 4096&nbsp;&nbsp;dec 30 07&#58;15 .<br/>');
@@ -183,7 +171,7 @@ $("#Terminal").append('-rw-r--r--.&nbsp;&nbsp; 1 root root&nbsp;&nbsp;&nbsp;&nbs
 $("#Terminal").append('-rw-r--r--.&nbsp;&nbsp; 1 root root&nbsp;&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;dec 29  2013 &nbsp;LICENSE<br/>');
 }
 	  
-	  
+//help	  
 	  
 	  else if (CurrentCommand == 'help' || CurrentCommand == '?') {
       $("#Terminal").append('GNU bash, version 4.3.30(1)-release (arm-unknown-linux-gnueabihf)<br/>');
@@ -202,22 +190,21 @@ $("#Terminal").append('-rw-r--r--.&nbsp;&nbsp; 1 root root&nbsp;&nbsp;&nbsp;&nbs
     }
 //sajtovi
     else if (CurrentCommand == 'sites' || CurrentCommand == 'blogs') {
-    $("#Terminal").append('<a href="https://wpxss.com" target="_blank"><img src="https://pcx3.com/slike/wpxss.png" id="stefan" style="width: 50%; float: left; padding-right: 5px;"/></a><a href="https://pcx3.com" target="_blank"><img src="https://pcx3.com/slike/pcx3.png" id="stefan" style="width: 50%; float: right; padding-left: 5px;"/></a><br/>');
-    $("#Terminal").append('&nbsp;<br/>');
+    $("#Terminal").empty();
+    $("#Terminal").append('My websites:<br/><br/>');
+    $("#Terminal").append('<a href="https://wpxss.com" target="_blank"><img src="https://pcx3.com/slike/wpxss.png" style="width: 50%; float: left; padding-right: 5px;"/></a><a href="https://pcx3.com" target="_blank"><img src="https://pcx3.com/slike/pcx3.png" style="width: 50%; float: right; padding-left: 5px;"/></a><br/>');
+            $("#Terminal").append('&nbsp;<br/><i class="fa fa-info-circle" aria-hidden="true"></i> Type "pc" or "wp" to show latest posts from those websites.<br/>');
     
     }    
-    
-    
-    
-    
+
 //whoami
     else if (CurrentCommand == 'whoami' || CurrentCommand == 'who') {
         $("#Terminal").empty();
-    $("#Terminal").append('<img src="https://pcx3.com/slike/stefan.jpg" id="stefan" style="float: left; padding-right: 10px;" id="randomimage" alt="Random image" /></br>Stefan Pejcic - SysAdmin who dabble with WordPress, crypto and blogging.<br/><br/>Summary&#58; I have over 5 years of experience working in WordPress and cPanel. Currently, I work as Technical Support Team Lead at NETOPS Group delivering exceptional support to customers through phone, email and chat. I lead by example, organize work, build reports, handle escalations, and help with ad hoc projects, and training.<br/><br/>When I&apos;m not on the job, I love hiking with my <i class="fas fa-dog"></i>, spend my time blogging on PC✗3.com and indulging my love for seeing new places.<br/><br/>Competencies&#58; WordPress, cPanel, Linux, VMware<br/>');
+    $("#Terminal").append('<a href="https://www.linkedin.com/in/stefan-pejcic/" target="_blank"><img src="https://pcx3.com/slike/stefan.jpg" id="stefan" style="float: left; padding-right: 10px;"/></a></br>Stefan Pejcic - SysAdmin who dabble with WordPress, crypto and blogging.<br/><br/>Summary&#58; I have over 5 years of experience working in WordPress and cPanel. Currently, I work as Technical Support Team Lead at NETOPS Group delivering exceptional support to customers through phone, email and chat. I lead by example, organize work, build reports, handle escalations, and help with ad hoc projects, and training.<br/><br/>When I&apos;m not on the job, I love hiking with my <i class="fas fa-dog"></i>, spend my time blogging on PC✗3.com and indulging my love for seeing new places.<br/><br/>Competencies&#58; WordPress, cPanel, Linux, VMware<br/>');
 
       $("#Terminal").append('<br/>experience &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous employers<br/>');
       $("#Terminal").append('education &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Courses and Certificates<br/>');
-      $("#Terminal").append('portfolio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OpenSource projects and Websites<br/>');
+      $("#Terminal").append('sites &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OpenSource projects and Websites<br/>');
     }
     //experience
     else if (CurrentCommand == 'experience' || CurrentCommand == 'jobs') {
@@ -276,12 +263,9 @@ $("#Terminal").append('-rw-r--r--.&nbsp;&nbsp; 1 root root&nbsp;&nbsp;&nbsp;&nbs
     }
     // sudo
     else if (CurrentCommand == 'sudo' || CurrentCommand == 'su' || CurrentCommand == 'sudo su') {
-      $("#Terminal").append('nice try<br/>');
-    }
-	  // df
-    else if (CurrentCommand == 'df' || CurrentCommand == 'du') {
-      $("#Terminal").append('Filesystem &nbsp;  &nbsp;1K-blocks  &nbsp;  &nbsp;Used  &nbsp;  &nbsp;Available  &nbsp;  &nbsp;Use&percnt;  &nbsp;  &nbsp;Mounted on<br/>');
-	  $("#Terminal").append('udev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7073924&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 &nbsp; &nbsp; &nbsp;7073924 &nbsp; &nbsp; &nbsp;0&percnt;&nbsp; &nbsp; &#47;dev<br/>');
+      $("#Terminal").append('nice try hacker! Here are some commands that you can use:<br/>');
+      $("#Terminal").append('<br/>hacker - generate a hacker name');
+      $("#Terminal").append('<br/>hack &nbsp;&nbsp;- hack NASA with HTML<br/>');
     }
     // resume
     else if (CurrentCommand == 'resume') {
@@ -295,12 +279,166 @@ $("#Terminal").append('-rw-r--r--.&nbsp;&nbsp; 1 root root&nbsp;&nbsp;&nbsp;&nbs
     //uname
     else if (CurrentCommand == 'uname') {
       $("#Terminal").append('Linux<br/>'); }
+    
+    
+    
+    //pcx3.com
+    else if (CurrentCommand == 'pcx3' || CurrentCommand == 'pcx3.com' || CurrentCommand == 'pc') {
+      $("#Terminal").empty();
+      $("#Terminal").append('<a href="https://pcx3.com" target="_blank"><img src="https://pcx3.com/wp-content/uploads/2021/04/logo-za-pcx3com.png" width="50px"></img></a><br/><br/>');
+
+       $("#Terminal").append('Latest posts from pcx3.com blog:<br/><br/><div id="feed-textarea"><ul></ul></div><br/>'); 
+          let url = 'http://pcx3.com/feed';
+  const textarea = document.querySelector('#feed-textarea > ul');
+    
+    feednami.load(url)
+    .then(feed => {
+      textarea.value = ''
+      for(let entry of feed.entries){
+          //create a list element
+          let li = document.createElement('li');
+          //add HTML content to list items
+          li.innerHTML = `<a href="${entry.link}" target="_blank">${entry.title}</a>`;
+          //append HTML content to list 
+          textarea.appendChild(li);
+      }
+    });
+        
+    } 
+    //wpxss.com
+    else if (CurrentCommand == 'wpxss' || CurrentCommand == 'wpxss.com' || CurrentCommand == 'wp') {
+      $("#Terminal").empty();
+      $("#Terminal").append('<a href="https://wpxss.com" target="_blank"><img src="https://wpxss.com/application/wp-content/uploads/2021/11/wpxss-logo.png" width="50px"></img></a><br/><br/>');
+
+       $("#Terminal").append('Latest posts from wpxss.com blog:<br/><br/><div id="wpxss-rss"><ul></ul></div><br/>'); 
+          let url = 'http://wpxss.com/feed';
+  const textarea = document.querySelector('#wpxss-rss > ul');
+    
+    feednami.load(url)
+    .then(feed => {
+      textarea.value = ''
+      for(let entry of feed.entries){
+          //create a list element
+          let li = document.createElement('li');
+          //add HTML content to list items
+          li.innerHTML = `<a href="${entry.link}" target="_blank">${entry.title}</a>`;
+          //append HTML content to list 
+          textarea.appendChild(li);
+      }
+    });
+        
+    }   
+      
+      
+      
+      
+    //bitcoin
+    else if (CurrentCommand == 'bitcoin' || CurrentCommand == 'btc') {
+      $("#Terminal").empty();
+      $("#Terminal").append('Current <i class="fa fa-bitcoin"></i>itcoin price (USD) is<div id="price"></div>');
+      //coindesk  api
+let priceDiv = document.getElementById('price');
+
+fetch('https://api.coindesk.com/v1/bpi/currentprice.json').then((r)=> {
+  return r.json();
+}).then((r) => {
+  priceDiv.innerHTML = JSON.stringify(r);
+  usd = r.bpi.USD;
+  parseCurrency(usd);
+});
+
+function parseCurrency(c) {
+  switch(c) {
+    default:
+      x = usd;
+  }
+  priceDiv.innerHTML = x.rate.substring(0, x.rate.length - 2);
+}
+        
+    }
+    
+    
+   
+        
+    
+    //hacker name generator
+    else if (CurrentCommand == 'hacker') {
+        
+        var firstNames = ["1337", "t0xic", "phantom", "ALPhA", "v1rus", "biTe", "krypt0", "cyb3r", "Bi0", "acid", "gh0st", "Lord", "r4dical"];
+        var secondNames = ["PWNER", "H4X0R", "buRn", "MuX", "d3st0y3r", "phreak", "Plague", "0verride", "Chaos"];
+
+    function getHackerName() {
+	var firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+	var secondName = secondNames[Math.floor(Math.random() * secondNames.length)];
+	return firstName + " " + secondName;
+}  
+        
+        
+    $("#Terminal").append('Your hacker name is: ').append(getHackerName);
+        
+    }
+
+
+    //hack nasa with html
+    else if (CurrentCommand == 'hack') {
+      $("#Terminal").empty();
+       $("#Terminal").append('<div id="console"></div>'); 
+        var intervalID = window.setInterval(updateScreen, 200);
+var c = document.getElementById("console");
+
+var txt = [
+  "FORCE: XX0022. ENCYPT://000.222.2345",
+  "TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1",
+  "RETRY: REINDEER FLOTILLA",
+  "Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0",
+  "================================================",
+  "Priority 1 // local / scanning...",
+  "scanning ports...",
+  "BACKDOOR FOUND (23.45.23.12.00000000)",
+  "BACKDOOR FOUND (13.66.23.12.00110000)",
+  "BACKDOOR FOUND (13.66.23.12.00110044)",
+  "...",
+  "...",
+  "BRUTE.EXE -r -z",
+  "...locating vulnerabilities...",
+  "...vulnerabilities found...",
+  "MCP/> DEPLOY CLU",
+  "SCAN: __ 0100.0000.0554.0080",
+  "SCAN: __ 0020.0000.0553.0080",
+  "SCAN: __ 0001.0000.0554.0550",
+  "SCAN: __ 0012.0000.0553.0030",
+  "SCAN: __ 0100.0000.0554.0080",
+  "SCAN: __ 0020.0000.0553.0080",
+]
+
+var docfrag = document.createDocumentFragment();
+
+function updateScreen() {
+  //Shuffle the "txt" array
+  txt.push(txt.shift());
+  //Rebuild document fragment
+  txt.forEach(function(e) {
+    var p = document.createElement("p");
+    p.textContent = e;
+    docfrag.appendChild(p);
+  });
+  //Clear DOM body
+  while (c.firstChild) {
+    c.removeChild(c.firstChild);
+  }
+  c.appendChild(docfrag);
+}
+        
+      
+        
+    }
     //No command
     else if (CurrentCommand === '') {}
     //Unknown
     else {
-      var NewLine = "<div>-bash: " + CurrentCommand + ": command not found </div>";
+      var NewLine = "<div id='notfound'>-bash: " + CurrentCommand + ": command not found </div>";
       $("#Terminal").append(NewLine);
+      
     }
   }
 }
