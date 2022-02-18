@@ -2,7 +2,7 @@
 
 Simple Linux terminal made in JS and CSS as a portfolio/about page on pcx3.com
 
-![screenshot](https://raw.githubusercontent.com/stefanpejcic/terminal-portfolio/main/stefan%20portfolio.png)
+![screenshot](https://raw.githubusercontent.com/stefanpejcic/terminal/main/screenshot.gif)
 
 ### Available commands
 
