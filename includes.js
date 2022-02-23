@@ -272,6 +272,9 @@ function ExecuteLine(command) {
     //uname
     else if (CurrentCommand == 'uname') {
       $("#Terminal").append('Linux<br/>'); }
+    //uname -r
+    else if (CurrentCommand == 'uname -r') {
+      $("#Terminal").append('3.10.0-1160.49.1.el7.x86_64<br/>'); }
     
     
     
