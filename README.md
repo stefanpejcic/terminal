@@ -49,7 +49,7 @@ Simple Linux terminal made in JS and CSS as a portfolio/about page on pcx3.com
 ```js
 // sudo
     else if (CurrentCommand == 'sudo' || CurrentCommand == 'su' || CurrentCommand == 'sudo su') {
-      $("#Terminal").append('nice try<br/>');
+      $("#Terminal").append('nice try hacker!<br/>');
     }
 ```
 ### License
