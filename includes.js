@@ -260,6 +260,11 @@ function ExecuteLine(command) {
       $("#Terminal").append('<br/>hacker - generate a hacker name');
       $("#Terminal").append('<br/>hack &nbsp;&nbsp;- hack NASA with HTML<br/>');
     }
+    // cpanel
+    else if (CurrentCommand == 'cp' || CurrentCommand == 'cpanel' || CurrentCommand == 'cpanelplugins') {
+      window.open("https://cpanelplugins.com"); 
+      $("#Terminal").append('CpanelPlugins.com opened in a new window <i class="fas fa-external-link-alt"></i><br/>');
+	}
     // resume
     else if (CurrentCommand == 'resume') {
       $("#Terminal").append('<a href="https://pcx3.com/slike/Profile.pdf" download="StefanPejcic_CV"><u>Click here</u></a> to download my CV or type cv to open it in new window.<br/>');}
