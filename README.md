@@ -22,7 +22,6 @@ Simple Linux terminal made in JS and CSS as a portfolio/about page on pcx3.com
 ### Other commands
 | command  | what it does |
 | ------------- | ------------- |
-|  bitcoin  | display Bitcoin price in USD |
 | hacker  | generates a random hacker name  |
 | hack hack  | hacking nasa with html |
 
