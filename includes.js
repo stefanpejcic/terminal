@@ -329,27 +329,6 @@ function ExecuteLine(command) {
         
     }   
       
-    //bitcoin
-    else if (CurrentCommand == 'bitcoin' || CurrentCommand == 'btc') {
-	    $("#Terminal").empty();
-	    $("#Terminal").append('Current <i class="fa fa-bitcoin"></i>itcoin price (USD) is<div id="price"></div>');
-      //coindesk  api
-	    let priceDiv = document.getElementById('price');
-	    fetch('https://api.coindesk.com/v1/bpi/currentprice.json').then((r)=> {
-		    return r.json();
-	    }).then((r) => {
-		    priceDiv.innerHTML = JSON.stringify(r);
-		    usd = r.bpi.USD;
-		    parseCurrency(usd);
-	    });
-	    function parseCurrency(c) {
-		    switch(c) {
-			    default:
-				    x = usd;
-		    }
-		    priceDiv.innerHTML = x.rate.substring(0, x.rate.length - 2);
-	    }
-    }
     //matrix
     else if (CurrentCommand == 'matrix') {
 	    $("#Terminal").empty();
